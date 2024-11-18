@@ -248,11 +248,7 @@ ejectdisc() {
       fi
    else
       printf "It is now safe to eject.\n"
-      debug_log "Ejecting is disabled, waiting for manual eject."
-      while [[ $DISC_TYPE != "open" && $DISC_TYPE != "empty" ]]; do
-         check_disc
-         sleep 5s
-      done
+      debug_log "It is now safe to eject."
    fi
 }
 
